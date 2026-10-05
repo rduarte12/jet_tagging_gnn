@@ -25,3 +25,6 @@ class AvailableModel(Base):
     registered_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 SessionLocal = sessionmaker(bind=engine)
+
+def init_db():
+    Base.metadata.create_all(engine)
