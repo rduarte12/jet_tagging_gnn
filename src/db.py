@@ -14,6 +14,14 @@ class InferenceJob(Base):
     latency_ms        = Column(Float,   nullable=False)
     throughput_jets_s = Column(Float,   nullable=False)
 
+class AvailableModel(Base):
+    __tablename__ = "available_models"
+    id            = Column(Integer, primary_key=True, autoincrement=True)
+    name          = Column(String,  nullable=False)
+    path          = Column(String,  nullable=False)
+    auc_roc       = Column(Float)
+    registered_at = Column(DateTime, default=datetime.utcnow)
+
 
 class ModelRegistry(Base):
     __tablename__ = "model_registry"
