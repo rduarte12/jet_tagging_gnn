@@ -56,7 +56,8 @@ app = FastAPI(
 )
 
 
-# Schemas
+
+# Schemas #
 
 class BatchRequest(BaseModel):
     jets: list[list[list[float]]] = Field(
