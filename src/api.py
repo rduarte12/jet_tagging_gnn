@@ -51,7 +51,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Jet Tagging GNN",
-    description="EdgeConv based top quark jet classifier. HEP benchmark dataset.",
+    description="EdgeConv based top quark jet classifier. HEP benchmark dataset. /n Developed by Rafael Duarte /n E-mail: rmduarte@usp.br",
     lifespan=lifespan,
 )
 
